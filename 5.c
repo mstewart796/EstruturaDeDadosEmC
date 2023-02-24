@@ -10,7 +10,7 @@ void main(){
 
     printf("Informe a velocidade em km/h: ");
     scanf("%d", &K);
-
+    
     float M = K/3.6;
 
     printf("%ikm/h é igual a %.2fm/s\n", K, M);
