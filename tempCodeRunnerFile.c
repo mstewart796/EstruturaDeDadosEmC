@@ -1,17 +1,15 @@
-// Leia um valor em real e a cotação do dólar. Em seguida, imprima o valor
-// correspondente em dólares.
+// 8. Leia o valor do raio de um círculo e calcule e imprima a área do círculo
+// correspondente. A área do círculo é π*r² , considere π = 3.141592.
 
 #include <stdio.h>
 
-void main(){
+void main() {
 
-    float real, cota, dolar;
-    printf("Informe o valor em real: R$");
-    scanf("%f", &real);
-    printf("Informe a cotação: ");
-    scanf("%f", &cota);
+    float raio, pi = 3.141592, area;
+    printf("Informe o valor do raio: ");
+    scanf("%f", &raio);
 
-    dolar = real * cota;
-    printf("O valor de R$%.2f hoje é: $%.2f\n", real, dolar);
-    
+    area = (raio * raio) * pi;
+    printf("A area do círculo é: %f\n", area);
+
 }
