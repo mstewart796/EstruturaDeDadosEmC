@@ -6,9 +6,9 @@
 
 void main() {
 
-    // for (int i = 1; i <= 100; i++) {
-    //     printf("%d\n", i);
-    // }
+    for (int i = 1; i <= 100; i++) {
+        printf("%d\n", i);
+    }
 
     int i = 1, j = 1;
     
@@ -16,4 +16,9 @@ void main() {
         printf("%d\n", i);
         i++;
     }
+
+    do {
+        printf("%d\n", j);
+        j++;
+    } while (j <= 100);
 }
