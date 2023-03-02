@@ -1,29 +1,47 @@
-// Faça um programa que receba a altura e o sexo de uma pessoa e calcule
-// e mostre seu peso ideal, utilizando as seguintes fórmulas (onde h
-// corresponde à altura):
-// - Homens: (72.7*h) − 58
-// - Mulheres: (62, 1*h) − 44, 7
+//  Faça um programa que faça 5 perguntas para uma pessoa sobre um
+// crime. As perguntas são:
+// - "Telefonou para a vítima?"
+// - "Esteve no local do crime?"
+// - "Mora perto da vítima?"
+// - "Devia para a vítima?"
+// - "Já trabalhou com a vítima?"
+// O programa deve no final emitir uma classificação sobre a participação da
+// pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve
+// ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como
+// "Assassino". Caso contrário, ele será classificado como "Inocente".
 
 #include <stdio.h>
 
 void main() {
 
-    float h; 
-    int sexo;
+    int resposta1, resposta2, resposta3, resposta4, resposta5;
 
-    printf("Informe a sua altura (em metros) : ");
-    scanf("%f", &h);
+    printf("Digite 0 para nao e 1 para sim\n");
+    printf("Telefonou para a vitima? ");
+    scanf("%d", &resposta1);
 
-    printf("Informe o seu sexo (1 para homen, 2 para mulher): ");
-    scanf("%d", &sexo);
+    printf("Esteve no local do crime? ");
+    scanf("%d", &resposta2);
 
-    float pesoIdeal;
+    printf("Mora perto da vitima? ");
+    scanf("%d", &resposta3);
 
-    if (sexo == 1) {
-        pesoIdeal = (72.7 * h) - 58;
-    } else if (sexo == 2) {
-        pesoIdeal = (62.1 * h) - 44,7;
+    printf("Devia para a vitima? ");
+    scanf("%d", &resposta4);
+
+    printf("Ja trabalhou com a vitima? ");
+    scanf("%d", &resposta5);
+
+    int total = resposta1 + resposta2 + resposta3 + resposta4 + resposta5;
+
+    if (total == 2) {
+        printf("Suspeita");
+    } else if (total == 3 || total ==4) {
+        printf("Cumplice");
+    } else if (total == 5) {
+        printf("Assassino");
+    } else {
+        printf("Inocente");
     }
 
-    printf("O seu peso ideal eh: %.2f", pesoIdeal);
 }
