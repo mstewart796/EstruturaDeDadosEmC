@@ -1,4 +1,5 @@
-// Faça um programa que leia 10 inteiros e imprima sua media.
+// Faça um programa que leia 10 inteiros positivos, ignorando não positivos,
+// e imprima sua média.
 
 #include <stdio.h>
 
@@ -9,9 +10,11 @@ void main() {
     for (int i = 1; i <= 10; i++) {
         printf("Informe o %dº valor: ", i);
         scanf("%d", &valor);
-        soma += valor;
+        if (valor >= 0) {
+            soma += valor;
+        }
     }
-    
+
     float media = soma / 10;
-    printf("A media dos valores eh: %f", media);
+    printf("A media dos valores positivos eh: %.2f", media);
 }
