@@ -15,7 +15,7 @@ int main() {
 
     if (nota1 < 0 || nota1 > 10) {
         printf("Erro, nota tem que ser maior ou igual a 1 e menor ou igual a 10");
-        return 0;
+        return 1;
     }
 
     printf("Informe nota 2: ");
@@ -23,12 +23,12 @@ int main() {
     
     if (nota2 < 0 || nota2 > 10) {
         printf("Erro, nota tem que ser maior ou igual a 1 e menor ou igual a 10");
-        return 0;
+        return 1;
     }
 
     float media = (nota1 + nota2) / 2;
 
     printf("A sua media eh: %.2f", media);
-    return 1;
+    return 0;
 
 }
