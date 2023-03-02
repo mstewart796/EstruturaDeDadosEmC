@@ -1,26 +1,12 @@
-// leia a distância em Km e a quantidade de litros de gasolina consumidos
-// por um carro em um percurso, calcule o consumo em Km/l e escreva uma
-// mensagem de acordo com a tabela abaixo:
+// Escreva um programa que escreva na tela, de 1 até 100, de 1 em 1, 3
+// vezes. A primeira vez deve usar a estrutura de repetição “for”, a segunda
+// vez a estrutura “while” e a terceira usando a estrutura “do while”
 
 #include <stdio.h>
 
 void main() {
 
-    float km, gas, kml;
-
-    printf("Informe a distanci em Km: ");
-    scanf("%f", &km);
-
-    printf("Informe a quantidade de gasonlina consumida em litros: ");
-    scanf("%f", &gas);
-
-    kml = km / gas; 
-
-    if (kml < 8) {
-        printf("Venda o carro!");
-    } else if (kml >= 8 && kml <= 12) {
-        printf("Economico!");
-    } else {
-        printf("Super economico!");
+    for (int i = 1; i <= 100; i++) {
+        printf("%d\n", i);
     }
 }
