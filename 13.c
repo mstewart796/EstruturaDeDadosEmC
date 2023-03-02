@@ -14,7 +14,7 @@ void main() {
     printf("Informe a sua altura (em metros) : ");
     scanf("%f", &h);
 
-    printf("Informe o seu sexo (1 para homen, 2 para mulher): ");
+    printf("Informe o seu sexo (1 para homem, 2 para mulher): ");
     scanf("%d", &sexo);
 
     float pesoIdeal;
