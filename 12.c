@@ -6,6 +6,29 @@
 
 #include <stdio.h>
 
-void main() {
+int main() {
     
+    int nota1, nota2;
+
+    printf("Informe nota 1: ");
+    scanf("%d", &nota1);
+
+    if (nota1 < 0 || nota1 > 10) {
+        printf("Erro, nota tem que ser maior ou igual a 1 e menor ou igual a 10");
+        return 0;
+    }
+
+    printf("Informe nota 2: ");
+    scanf("%d", &nota2);
+    
+    if (nota2 < 0 || nota2 > 10) {
+        printf("Erro, nota tem que ser maior ou igual a 1 e menor ou igual a 10");
+        return 0;
+    }
+
+    float media = (nota1 + nota2) / 2;
+
+    printf("A sua media eh: %.2f", media);
+    return 1;
+
 }
