@@ -13,5 +13,5 @@ void main() {
     }
     
     float media = soma / 10;
-    printf("A media dos valores eh: %f", media);
+    printf("A media dos valores eh: %.2f", media);
 }
