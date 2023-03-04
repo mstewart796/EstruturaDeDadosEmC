@@ -14,4 +14,12 @@ void main() {
     
     printf("Informe numero 2: ");
     scanf("%d", &numero2);
+
+    int soma = 0;
+
+    for (int i = numero1; i <= numero2; i++) {
+        if (i % 2 == 0) {
+            soma += i;
+        }
+    }
 }
