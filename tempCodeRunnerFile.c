@@ -1,20 +1,16 @@
-// Faça um programa que leia 10 inteiros positivos, ignorando não positivos,
-// e imprima sua média.
+// Faça um programa que leia um numero inteiro positivo “N” e imprima
+// todos os números naturais de 0 até N em ordem decrescente.
 
 #include <stdio.h>
 
 void main() {
 
-    int valor, soma = 0;
+    int N;
 
-    for (int i = 1; i <= 10; i++) {
-        printf("Informe o %dº valor: ", i);
-        scanf("%d", &valor);
-        if (valor >= 0) {
-            soma += valor;
-        }
+    printf("Informe o valor de N: ");
+    scanf("%d", &N);
+
+    for (int i = N; i >= 0; i--) {
+        printf("%d\n", i);
     }
-
-    float media = soma / 10;
-    printf("A media dos valores positivos eh: %.2f", media);
 }
