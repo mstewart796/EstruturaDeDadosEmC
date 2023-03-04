@@ -3,3 +3,9 @@
 // números digitados;
 // - a multiplicação dos números ímpares desse intervalo, incluindo os
 // digitados;
+
+#include <stdio.h>
+
+void main() {
+    
+}
