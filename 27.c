@@ -6,4 +6,15 @@
 
 void main() {
 
+    int N = 3;
+    int counter = 1;
+    int lineCounter = 0;
+    for (int i = 1; i <= N; i++) {
+        for (int j = 0; j <= lineCounter; j++) {
+            printf("%d ", counter);
+            counter++;
+        }
+        printf("\n");
+        lineCounter++;  
+    }
 }
