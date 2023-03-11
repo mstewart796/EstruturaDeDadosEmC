@@ -1,16 +1,18 @@
-// Crie um programa que lê 5 valores inteiros e, em seguida, mostre na tela os valores lidos. 
+//  Escreva um programa que leia 10 números inteiros e os armazene em um vetor. Imprima 
+// o vetor, o maior elemento e a posição que ele se encontra.
 
 #include <stdio.h>
 
 void main() {
 
-    int array[5];
-    for (int i = 0; i < 5; i++) {
-        printf("Informe o %dº numero: ", i + 1);
-        scanf("%d", &array[i]);
+        int vetor[10], maior = 0, posicao;
+    for (int i = 0; i < 10; i++) {
+        printf("Informe o %dº numero: ", i);
+        scanf("%d", &vetor[i]);
+        if (i > maior) {
+            maior = vetor[i];
+            posicao = i;
+        }
     }
-    printf("Here is your array: \n");
-    for (int i = 0; i < 5; i++) {
-        printf("%d ", array[i]);
-    }
+    printf("O maior numero foi: %d, localizada em posicao vetor[%d]", maior, posicao);
 }
