@@ -16,8 +16,11 @@
     int A[6] = {1, 0, 5, -2, -5, 7};
     // step b
     int simple = A[0] + A[1] + A[5];
-    printf("%d", simple);
+    printf("The sum of postions 0, 1 and 5 are: %d\n", simple);
     // step c
     A[4] = 100;
-    
+    // step d
+    for (int i = 0; i < 6; i++) {
+        printf("%d\n", A[i]);
+    }    
  }
