@@ -12,6 +12,6 @@
 
  void main() {
 
-    int vetor[6];
+    int vetor[6] = {1, 0, 5, -2, -5, 7};
     
  }
