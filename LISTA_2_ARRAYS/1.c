@@ -12,6 +12,10 @@
 
  void main() {
 
-    int vetor[6] = {1, 0, 5, -2, -5, 7};
+    // step a
+    int A[6] = {1, 0, 5, -2, -5, 7};
+    // step b
+    int simple = A[0] + A[1] + A[5];
+    printf("%d", simple);
     
  }
