@@ -5,7 +5,7 @@
 
 void main() {
 
-        int vetor[10], maior = 0, posicao;
+    int vetor[10], maior = 0, posicao;
     for (int i = 0; i < 10; i++) {
         printf("Informe o %dº numero: ", i);
         scanf("%d", &vetor[i]);
