@@ -9,4 +9,8 @@ void main() {
         printf("Informe o %dº numero: ", i + 1);
         scanf("%d", &array[i]);
     }
+    printf("Here is your array: \n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", array[i]);
+    }
 }
