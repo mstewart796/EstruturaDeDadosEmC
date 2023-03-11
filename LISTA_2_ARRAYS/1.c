@@ -17,5 +17,7 @@
     // step b
     int simple = A[0] + A[1] + A[5];
     printf("%d", simple);
+    // step c
+    A[4] = 100;
     
  }
