@@ -2,8 +2,10 @@
 // primeiros números naturais ímpares.
  
  #include <stdio.h>
+ #include <locale.h>
 
  void main() {
+    setlocale(LC_ALL, "Portuguese");
 
     int N;
 

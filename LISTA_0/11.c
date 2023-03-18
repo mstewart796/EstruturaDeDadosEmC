@@ -2,8 +2,10 @@
 // número é par ou ímpar, positivo ou negativo.
 
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+	setlocale(LC_ALL, "Portuguese");
 
     int numero;
     printf("Informe o numero: ");

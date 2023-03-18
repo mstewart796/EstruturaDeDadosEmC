@@ -2,8 +2,10 @@
 // o vetor, o maior elemento e a posição que ele se encontra.
 
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+	setlocale(LC_ALL, "Portuguese");
 
     int vetor[10], maior = 0, posicao;
     for (int i = 0; i < 10; i++) {

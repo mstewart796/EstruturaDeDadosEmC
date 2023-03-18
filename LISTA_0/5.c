@@ -3,8 +3,10 @@
 // K/3.6, sendo K a velocidade em km/h e M em m/s.
 
 #include <stdio.h>
+#include <locale.h>
 
-void main(){
+void main() {
+    setlocale(LC_ALL, "Portuguese");
 
     int K;
 

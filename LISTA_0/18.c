@@ -3,8 +3,10 @@
 // vez a estrutura “while” e a terceira usando a estrutura “do while”
 
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+    setlocale(LC_ALL, "Portuguese");
 
     for (int i = 1; i <= 100; i++) {
         printf("%d\n", i);

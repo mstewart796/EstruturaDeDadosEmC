@@ -2,8 +2,10 @@
 // todos os números naturais de 0 até “N” em ordem crescente.
 
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+    setlocale(LC_ALL, "Portuguese");
 
     int N;
 

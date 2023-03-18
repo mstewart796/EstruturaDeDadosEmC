@@ -2,8 +2,10 @@
 // correspondente em dólares.
 
 #include <stdio.h>
+#include <locale.h>
 
-void main(){
+void main() {
+    setlocale(LC_ALL, "Portuguese");
 
     float real, cota, dolar;
     printf("Informe o valor em real: R$");

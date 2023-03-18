@@ -1,8 +1,10 @@
 // Leia quatro notas, calcule a média aritmética e imprima o resultado.
 
 #include <stdio.h>
+#include <locale.h>
 
-void main(){
+void main() {
+    setlocale(LC_ALL, "Portuguese");
 
     float N1, N2, N3, N4, media;
 

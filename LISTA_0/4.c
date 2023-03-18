@@ -3,8 +3,10 @@
 // F a temperatura em Fahrenheit e C a temperatura em Celsius.
 
 #include <stdio.h>
+#include <locale.h>
 
-void main(){
+void main() {
+    setlocale(LC_ALL, "Portuguese");
 
     int C;
 

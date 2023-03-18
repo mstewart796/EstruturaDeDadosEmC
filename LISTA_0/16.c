@@ -5,8 +5,10 @@
 // - Ou ter pelo menos 60 anos e trabalhado pelo menos 25 anos.
 
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+	setlocale(LC_ALL, "Portuguese");
 
     int idade, tempoDS;
 

@@ -1,8 +1,10 @@
 // Faça um programa que imprima a tabuada de multiplicação de 1 a 9;
 
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+    setlocale(LC_ALL, "Portuguese");
 
     // * 1
     printf("-------------\n");

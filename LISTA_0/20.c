@@ -1,8 +1,10 @@
 // Faça um programa que leia 10 inteiros e imprima sua media.
 
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+    setlocale(LC_ALL, "Portuguese");
 
     int valor, soma = 0;
 

@@ -2,8 +2,10 @@
 // e imprima sua média.
 
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+    setlocale(LC_ALL, "Portuguese");
 
     int valor, soma = 0;
 

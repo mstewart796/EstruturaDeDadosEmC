@@ -2,8 +2,10 @@
 // e imprima a média geral (considere a média aritmética)
 
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+	setlocale(LC_ALL, "Portuguese");
 
     int vetor[10], soma = 0;
     for (int i = 0; i < 10; i++) {

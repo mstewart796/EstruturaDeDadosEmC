@@ -3,8 +3,10 @@
 // temos:
 
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+    setlocale(LC_ALL, "Portuguese");
 
     int N, counter = 1, lineCounter = 0;
     printf("Digite o valor de N: ");

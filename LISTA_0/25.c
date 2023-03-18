@@ -5,8 +5,10 @@
 // digitados;
 
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+    setlocale(LC_ALL, "Portuguese");
 
     int numero1, numero2;
     printf("Informe numero 1: ");
