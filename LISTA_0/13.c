@@ -5,8 +5,10 @@
 // - Mulheres: (62, 1*h) − 44, 7
 
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+	setlocale(LC_ALL, "Portuguese");
 
     float h; 
     int sexo;

@@ -8,8 +8,10 @@
 // verificações necessárias.
 
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+	setlocale(LC_ALL, "Portuguese");
 
 int lab, as, final, pesoLab = 2, pesoAS = 3, pesoFinal = 5;
 

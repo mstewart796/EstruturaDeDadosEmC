@@ -11,9 +11,11 @@
 // n: quantidade de dados 
 
 #include <stdio.h>
+#include <locale.h>
 // #include <locale.h>
 
 void main() {
+	setlocale(LC_ALL, "Portuguese");
     // setlocale(LC_ALL, "pt_PT.UTF-8");
     int vetor[10];
     for (int i = 0; i < 10; i++) {

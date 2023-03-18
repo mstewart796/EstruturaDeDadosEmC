@@ -4,9 +4,11 @@
 // - A raiz quadrada do número digitado
 
 #include <stdio.h>
+#include <locale.h>
 #include <math.h>
 
 void main() {
+	setlocale(LC_ALL, "Portuguese");
 
     float numero, quadrado, sqRoot;
 

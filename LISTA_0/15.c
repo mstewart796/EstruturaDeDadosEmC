@@ -11,8 +11,10 @@
 // "Assassino". Caso contrário, ele será classificado como "Inocente".
 
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+	setlocale(LC_ALL, "Portuguese");
 
     int resposta1, resposta2, resposta3, resposta4, resposta5;
 

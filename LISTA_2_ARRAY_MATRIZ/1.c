@@ -8,9 +8,11 @@
  
 
  
- #include <stdio.h>
+#include <stdio.h>
+#include <locale.h>
 
  void main() {
+	setlocale(LC_ALL, "Portuguese");
 
     // step a
     int A[6] = {1, 0, 5, -2, -5, 7};
