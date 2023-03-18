@@ -9,7 +9,7 @@
 
 #include <stdio.h>
 
-void main(){
+void main() {
 
 int lab, as, final, pesoLab = 2, pesoAS = 3, pesoFinal = 5;
 

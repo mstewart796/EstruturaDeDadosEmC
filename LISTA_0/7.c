@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-void main(){
+void main() {
 
     float real, cota, dolar;
     printf("Informe o valor em real: R$");
