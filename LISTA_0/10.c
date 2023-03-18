@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <math.h>
 
-void main(){
+void main() {
 
     float numero, quadrado, sqRoot;
 
