@@ -2,8 +2,10 @@
 // correspondente. A área do círculo é π*r² , considere π = 3.141592.
 
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+    setlocale(LC_ALL, "Portuguese");
 
     float raio, pi = 3.141592, area;
     printf("Informe o valor do raio: ");

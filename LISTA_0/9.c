@@ -5,9 +5,11 @@
 // - O terceiro receberá o restante;
 // Calcule e imprima a quantia ganha por cada um dos ganhadores.
 
-#include <stdio.h> 
+#include <stdio.h>
+#include <locale.h> 
 
 void main() {
+    setlocale(LC_ALL, "Portuguese");
 
     float valor = 780000, primeiro = valor * 0.46, segundo = valor * 0.32, terceiro = valor * (1 - (0.46 + 0.32));
     printf("O primeiro receberá: R$%.2f\n\
