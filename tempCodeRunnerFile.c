@@ -1,18 +1,16 @@
-//  Escreva um programa que leia 10 números inteiros e os armazene em um vetor. Imprima 
-// o vetor, o maior elemento e a posição que ele se encontra.
+// Faça um vetor de tamanho 10 preenchido com o seguinte valor: (i+ 5 * i) / (i+1), sendo 
+// i a posição do elemento no vetor. Em seguida imprima o vetor na tela. 
 
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+    setlocale(LC_ALL, "Portuguese");
 
-        int vetor[10], maior = 0, posicao;
-    for (int i = 0; i < 10; i++) {
-        printf("Informe o %dº numero: ", i);
-        scanf("%d", &vetor[i]);
-        if (i > maior) {
-            maior = vetor[i];
-            posicao = i;
-        }
+    double vetor[10];
+
+    for (int i = 1; i <= 10; i++) {
+        vetor[i] = (i + 5 * 1) / (i+1);
+        printf("Vetor[%d] = %.2lf\n", i, vetor[i]);
     }
-    printf("O maior numero foi: %d, localizada em posicao vetor[%d]", maior, posicao);
 }
