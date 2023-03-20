@@ -1,25 +1,37 @@
-// Escreva um programa que leia 10 números inteiros e os armazene em um vetor. Calcule o 
-// desvio padrão e imprima na tela o resultado. 
+// Escreva um programa que leia 10 nÃºmeros inteiros e os armazene em um vetor. Calcule o 
+// desvio padrÃ£o e imprima na tela o resultado. 
  
-// O desvio padrão (DP) é calculado usando-se a seguinte fórmula: 
+// O desvio padrÃ£o (DP) Ã© calculado usando-se a seguinte fÃ³rmula: 
  
 // Sendo, 
-// ?: símbolo de somatório. Indica que temos que somar todos os termos, desde 
-// a primeira posição (i=1) até a posição n 
-// xi: valor na posição i no conjunto de dados 
-// MA: média aritmética dos dados 
+// âˆ‘: sÃ­mbolo de somatÃ³rio. Indica que temos que somar todos os termos, desde 
+// a primeira posiÃ§Ã£o (i=1) atÃ© a posiÃ§Ã£o n 
+// xi: valor na posiÃ§Ã£o i no conjunto de dados 
+// MA: mÃ©dia aritmÃ©tica dos dados 
 // n: quantidade de dados 
 
 #include <stdio.h>
 #include <locale.h>
-// #include <locale.h>
+#include <math.h>
 
 void main() {
 	setlocale(LC_ALL, "Portuguese");
-    // setlocale(LC_ALL, "pt_PT.UTF-8");
-    int vetor[10];
+
+    double vetor[10], soma = 0.0, media = 0.0, somaDP = 0.0, DP = 0.0;
+    
+    // for loop to read the values and sum the total
     for (int i = 0; i < 10; i++) {
-        printf("Informe o %d? n?mero: ", i);
-        scanf("%d", &vetor[i]);
+        printf("Informe o %dÂº nÃºmero: ", i+1);
+        scanf("%lf", &vetor[i]);
+        soma += vetor[i];
     }
+    media = soma / 10;
+
+    // for loop to calculate the standard deviation
+    for (int i = 0; i < 10; i++) {
+        somaDP += (vetor[i] - media) * (vetor[i] - media);
+    }
+    DP = sqrt(somaDP / 10);
+    printf("O desvio padrÃ£o Ã©: %lf\n", DP);
+
 }
