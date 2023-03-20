@@ -1,18 +1,20 @@
-//  Escreva um programa que leia 10 números inteiros e os armazene em um vetor. Imprima 
-// o vetor, o maior elemento e a posição que ele se encontra.
-
+//  Faça um programa que preencha um vetor de tamanho 100 com os 100 primeiros números 
+// naturais que não são múltiplos de 5. 
+ 
 #include <stdio.h>
 
 void main() {
 
-        int vetor[10], maior = 0, posicao;
-    for (int i = 0; i < 10; i++) {
-        printf("Informe o %dº numero: ", i);
-        scanf("%d", &vetor[i]);
-        if (i > maior) {
-            maior = vetor[i];
-            posicao = i;
+    int vetor[100], n = 0, counter = 1;
+    while (n < 100) {
+        if (counter % 5 != 0) {
+            vetor[n] = counter;
+            n++;
         }
+        counter++;        
     }
-    printf("O maior numero foi: %d, localizada em posicao vetor[%d]", maior, posicao);
+
+    for (int i = 0; i < 100; i++) {
+        printf("%d\n", vetor[i]);
+    }
 }
