@@ -1,20 +1,29 @@
-//  Faça um programa que preencha um vetor de tamanho 100 com os 100 primeiros números 
-// naturais que não são múltiplos de 5. 
+// Gerar e imprimir uma matriz de tamanho 10 x 10, onde seus elementos são da forma: 
+ 
+// A[i][j] = 2i + 7j - 2 se i < j; 
+// A[i][j] = 3i² + 1 se i = j; 
+// A[i][j] = 4i³ + 5j² + 1 se i > j: 
  
 #include <stdio.h>
+#include <locale.h>
 
-void main() {
+void main () {
+    setlocale(LC_ALL, "Portuguese");
+    int A[10][10];
 
-    int vetor[100], n = 0, counter = 1;
-    while (n < 100) {
-        if (counter % 5 != 0) {
-            vetor[n] = counter;
-            n++;
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            if (i < j) A[i][j] = 2 * i + 7 * j;
+            if (i == j) A[i][j] = 3 * (i * i) + 1;
+            if (i > j) A[i][j] = 4 * (i * i * i) + 5 * (j * j) + 1;
         }
-        counter++;        
     }
 
-    for (int i = 0; i < 100; i++) {
-        printf("%d\n", vetor[i]);
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            printf("%d\t", A[i][j]);
+        }
+        printf("\n");
     }
-}
+
+}    
