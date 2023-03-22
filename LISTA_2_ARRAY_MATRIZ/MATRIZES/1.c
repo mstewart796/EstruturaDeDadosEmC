@@ -17,9 +17,8 @@ void main() {
 
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 2; j++) {
-            printf("\nmatriz1[%d][%d]: ", matriz1[i][j]);
+            printf("%d ", matriz1[i][j]);
         }
+        printf("\n");
     }
-
-
 }
