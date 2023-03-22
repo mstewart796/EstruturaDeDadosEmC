@@ -1,24 +1,25 @@
-// Faça um programa que preenche uma matriz 4 x 4 com o produto do valor da linha e 
-// da coluna de cada elemento. Em seguida, imprima na tela a matriz. 
+// Leia uma matriz de 3 x 3 elementos. Calcule a soma dos elementos que estão na 
+// diagonal principal. 
 
 #include <stdio.h>
 #include <locale.h>
 
 void main() {
     setlocale(LC_ALL, "Portuguese");
+    int matriz[3][3], soma;
 
-    int matriz[4][4];
-
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 4; j++) {
-            matriz[i][j] = i * j;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("Informe o valor de matriz[%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
         }
     }
 
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
-            printf("%d ", matriz[i][j]);
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (i == j) soma += matriz[i][j];
         }
-        printf("\n");
     }
+
+    printf("Soma = %d", soma);
 }
