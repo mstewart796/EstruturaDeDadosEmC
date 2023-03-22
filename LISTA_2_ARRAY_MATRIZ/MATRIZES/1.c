@@ -5,7 +5,7 @@
 #include <locale.h>
 
 void main() {
-    
+    setlocale(LC_ALL, "Portuguese");
     int matriz1[2][2], matriz2[2][2];
 
     for (int i = 0; i < 2; i++) {

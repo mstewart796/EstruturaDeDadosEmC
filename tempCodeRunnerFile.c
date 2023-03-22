@@ -1,20 +1,24 @@
-//  Faça um programa que preencha um vetor de tamanho 100 com os 100 primeiros números 
-// naturais que não são múltiplos de 5. 
- 
+// Faça um programa que preenche uma matriz 4 x 4 com o produto do valor da linha e 
+// da coluna de cada elemento. Em seguida, imprima na tela a matriz. 
+
 #include <stdio.h>
+#include <locale.h>
 
 void main() {
+    setlocale(LC_ALL, "Portuguese");
 
-    int vetor[100], n = 0, counter = 1;
-    while (n < 100) {
-        if (counter % 5 != 0) {
-            vetor[n] = counter;
-            n++;
+    int matriz[4][4];
+
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            matriz[i][j] = i * j;
         }
-        counter++;        
     }
 
-    for (int i = 0; i < 100; i++) {
-        printf("%d\n", vetor[i]);
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
     }
 }
