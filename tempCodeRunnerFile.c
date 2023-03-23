@@ -1,5 +1,5 @@
-// Leia uma matriz de 3 x 3 elementos. Calcule a soma dos elementos que estão acima da 
-// diagonal principal. 
+//  Leia uma matriz de 3 x 3 elementos. Calcule a soma dos elementos que estão abaixo da 
+// diagonal principal.
 
 #include <stdio.h>
 #include <locale.h>
@@ -14,6 +14,6 @@ void main() {
             scanf("%d", &matriz[i][j]);
         }
     }
-    soma = matriz[0][1] + matriz[0][2] + matriz[1][2];
+    soma = matriz[1][0] + matriz[2][0] + matriz[2][1];
     printf("A soma é: %d", soma);
 }
