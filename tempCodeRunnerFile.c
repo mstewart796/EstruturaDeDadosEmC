@@ -1,34 +1,16 @@
-// Elaborar um programa que leia dois valores inteiros (A e B). Em seguida faça uma
-// função que retorne a soma do dobro dos dois números lidos. A função deverá armazenar o
-// dobro de A na própria variável A e o dobro de B na própria variável B.
+// Crie um programa que contenha um array de float contendo 10 elementos. Imprima o
+// endereço de cada posição desse array.
 
 #include <stdio.h>
 #include <locale.h>
-
-int soma(int *A, int *B) {
-
-    *A = *A * 2;
-    *B = *B * 2;
-    int soma = *A + *B;
-    return soma;
-
-    
-}
 
 void main() {
     
     setlocale(LC_ALL, "Portuguese");
 
-    int A, B;
+    float myArray[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-    printf("Informe o valor de A: ");
-    scanf("%d", &A);
-    
-    printf("Informe o valor de B: ");
-    scanf("%d", &B);
-
-    printf("O resultado da soma é: %d\n", soma(&A, &B));
-    printf("O novo valor de A é: %d\n", A);
-    printf("O novo valor de B é: %d", B);
-
+    for (int i = 0; i < 10; i++){
+        printf("O endereço de myArray[%d] é %p\n", i, &myArray[i]);
+    }
 }
