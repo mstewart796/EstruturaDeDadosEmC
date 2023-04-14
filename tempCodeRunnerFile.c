@@ -1,40 +1,34 @@
-// Faça um programa que leia dois valores inteiros e chame uma função que receba estes
-// 2 valores de entrada e retorne o maior valor na primeira variável e o menor valor na
-// segunda variável. Escreva o conteúdo das 2 variáveis na tela.
+// Elaborar um programa que leia dois valores inteiros (A e B). Em seguida faça uma
+// função que retorne a soma do dobro dos dois números lidos. A função deverá armazenar o
+// dobro de A na própria variável A e o dobro de B na própria variável B.
+
 #include <stdio.h>
 #include <locale.h>
 
-void maiorMenor(int *x, int *y);
+int soma(int *A, int *B) {
+
+    *A = *A * 2;
+    *B = *B * 2;
+    int soma = *A + *B;
+    return soma;
+
+    
+}
 
 void main() {
     
     setlocale(LC_ALL, "Portuguese");
+
+    int A, B;
+
+    printf("Informe o valor de A: ");
+    scanf("%d", &A);
     
-    int x, y;
+    printf("Informe o valor de B: ");
+    scanf("%d", &B);
 
-    printf("Informe o primeiro valor: ");
-    scanf("%d", &x);
-    
-    printf("Informe o segundo valor: ");
-    scanf("%d", &y);
-
-    maiorMenor(&x, &y);
-
-}
-
-void maiorMenor(int *x, int *y) {
-
-    int maior, menor;
-
-    if (x > y) {
-        maior = *x;
-        menor = *y;
-    } else {
-        maior = *y;
-        menor = *x;
-    }
-
-    printf("O maior valor é: %d\n", maior);
-    printf("O menor valor é: %d\n", menor);
+    printf("O resultado da soma é: %d\n", soma(&A, &B));
+    printf("O novo valor de A é: %d\n", A);
+    printf("O novo valor de B é: %d", B);
 
 }
