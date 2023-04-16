@@ -11,6 +11,7 @@ void main() {
 
     // my code - we haven't been taught how to take strings that have blank space as an input so I'm not sure how fgets work.
     // I will research it at a later date when I have more time
+    // I have included the chatgpt code with fgets at the bottom
 
     struct {
 
