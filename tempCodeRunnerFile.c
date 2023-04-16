@@ -1,3 +1,7 @@
+// Refaça a questão anterior de modo que os vetores sejam genéricos oferecidos pelo usuário 
+// através do teclado e o programa deve apresentar o resultado.
+
+
 // Considerando a estrutura 
 // struct Vetor{ 
 // float x; 
@@ -12,20 +16,26 @@
 #include <locale.h>
 #include <string.h>
 
-typedef struct {
+struct Vetor {
 
     float x;
     float y;
     float z;
-} Vetor;
+};
 
 void main() {
     
     setlocale(LC_ALL, "Portuguese");
 
-    Vetor vetor1 = {1.0, 2.0, 3.0}; 
-    Vetor vetor2 = {0.0, 5.0, 10.0};
-    Vetor result;
+    struct Vetor vetor1; 
+    struct Vetor vetor2;
+    struct Vetor result;
+
+    printf("Informe o X, Y, e Z do primeiro vetor:\n");
+    scanf("%f %f %f", &vetor1.x, &vetor1.y, &vetor1.z);
+
+    printf("Informe o X, Y, e Z do segundo vetor:\n");
+    scanf("%f %f %f", &vetor2.x, &vetor2.y, &vetor2.z);
 
     result.x = vetor1.x + vetor2.x;
     result.y = vetor1.y + vetor2.y;
