@@ -43,13 +43,13 @@ void main() {
 
     reuniao.horario.hora = 13;
     reuniao.horario.minuto = 30;
-    reuniao.horario.segundo = 25;
+    reuniao.horario.segundo = 0;
 
     strcpy(reuniao.texto, "Meeting about the new product sales");
 
     printf("Meeting information: \n%s\n", reuniao.texto);
     printf("Date: %d/%d/%d\n", reuniao.data.dia, reuniao.data.mes, reuniao.data.ano);
-    printf("Time: %d:%d:%d\n", reuniao.horario.hora, reuniao.horario.minuto, reuniao.horario.segundo);
+    printf("Time: %d:%d:%02d\n", reuniao.horario.hora, reuniao.horario.minuto, reuniao.horario.segundo);
 
 
     
