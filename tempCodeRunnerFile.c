@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 #include <locale.h>
-#include <string.h>
+#include <math.h>
 
 typedef struct {
 
@@ -22,6 +22,8 @@ float subtracaoReal(Numero z, Numero w);
 float subtracaoImaginaria(Numero z, Numero w);
 float produtoReal(Numero z, Numero w);
 float produtoImaginaria(Numero z, Numero w);
+float modReal (Numero z, Numero w);
+float modImaginaria (Numero z, Numero w);
 
 void main() {
     
@@ -46,7 +48,10 @@ void main() {
     printf("\n*****PRODUTO*****\n\n");
     printf("REAL: z * w = %.2f\n", produtoReal(z, w));
     printf("IMAGINARIA: z * w = %.2f\n", produtoImaginaria(z, w));
-
+    
+    printf("\n*****MODULO*****\n\n");
+    printf("REAL: z * w = %.2f\n", modReal(z, w));
+    printf("IMAGINARIA: z * w = %.2f\n", modImaginaria(z, w));
 }
 
 float somaReal (Numero z, Numero w) {
@@ -70,9 +75,18 @@ float subtracaoImaginaria(Numero z, Numero w) {
 
 float produtoReal(Numero z, Numero w) {
 
-    return z.real * w.real;;
+    return z.real * w.real - z.imaginaria * w.imaginaria;
 }
 float produtoImaginaria(Numero z, Numero w) {
 
-    return z.imaginaria * w.imaginaria;
+    return z.real * w.imaginaria + z.imaginaria * w.imaginaria;
+}
+
+float modReal (Numero z, Numero w) {
+
+    return sqrt(pow(z.real, 2)) + pow(z.imaginaria, 2);
+}
+float modImaginaria (Numero z, Numero w) {
+
+    return sqrt(pow(w.real, 2)) + pow(w.imaginaria, 2);
 }
