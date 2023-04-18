@@ -36,7 +36,7 @@ void main() {
         alunos[i].media =(alunos[i].nota1 + alunos[i].nota2) / 2;
         }
 
-    printf("---LISTA FINAL---");
+    printf("---LISTA FINAL---\n");
     for (int i = 0; i < 5; i++) {
         printf("Nota media de %s foi: %.2f\n", alunos[i].nome, alunos[i].media);
     } 
