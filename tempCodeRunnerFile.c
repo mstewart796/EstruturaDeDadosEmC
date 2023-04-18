@@ -1,47 +1,78 @@
-// Refaça a questão anterior de modo que os vetores sejam genéricos oferecidos pelo usuário 
-// através do teclado e o programa deve apresentar o resultado.
-
-
-// Considerando a estrutura 
-// struct Vetor{ 
-// float x; 
-// float y; 
-// float z; 
-// }; 
-// para representar um vetor no R³, implemente um programa que calcule a soma de dois 
-// vetores e armazena estas informações em uma estrutura. Os vetores são (1, 2, 3) e (0, 5, 10). 
+// Faça um programa que faca operações simples de números complexos: 
  
-  
+//  - Crie e leia dois números complexos z e w, compostos por parte real e parte imaginária. 
+//  - Armazene e depois imprima na tela a soma, subtração e produto entre z e w, nessa ordem, 
+// bem como o módulo de ambos. 
+ 
+// OBS.: pesquise as fórmulas caso desconheça
+
 #include <stdio.h>
 #include <locale.h>
 #include <string.h>
 
-struct Vetor {
+typedef struct {
 
-    float x;
-    float y;
-    float z;
-};
+    float real;
+    float imaginaria;
+} Numero;
+
+float somaReal(Numero z, Numero w);
+float somaImaginaria(Numero z, Numero w);
+float subtracaoReal(Numero z, Numero w);
+float subtracaoImaginaria(Numero z, Numero w);
+float produtoReal(Numero z, Numero w);
+float produtoImaginaria(Numero z, Numero w);
 
 void main() {
     
     setlocale(LC_ALL, "Portuguese");
 
-    struct Vetor vetor1; 
-    struct Vetor vetor2;
-    struct Vetor result;
+    Numero z, w;
 
-    printf("Informe o X, Y, e Z do primeiro vetor:\n");
-    scanf("%f %f %f", &vetor1.x, &vetor1.y, &vetor1.z);
+    z.real = 1.0;
+    z.imaginaria = 1.0;
 
-    printf("Informe o X, Y, e Z do segundo vetor:\n");
-    scanf("%f %f %f", &vetor2.x, &vetor2.y, &vetor2.z);
+    w.real = 2.5;
+    w.imaginaria = -1.5;
 
-    result.x = vetor1.x + vetor2.x;
-    result.y = vetor1.y + vetor2.y;
-    result.z = vetor1.z + vetor2.z;
+    printf("*****SOMA*****\n\n");
+    printf("REAL: z + w = %.2f\n", somaReal(z, w));
+    printf("IMAGINARIA: z + w = %.2f\n", somaImaginaria(z, w));
 
-    printf("X = %.2f\n", result.x);
-    printf("Y = %.2f\n", result.y);
-    printf("Z = %.2f\n", result.z);
+    printf("\n*****SUBTRACAO*****\n\n");
+    printf("REAL: z - w = %.2f\n", subtracaoReal(z, w));
+    printf("IMAGINARIA: z - w = %.2f\n", subtracaoImaginaria(z, w));
+
+    printf("\n*****PRODUTO*****\n\n");
+    printf("REAL: z * w = %.2f\n", produtoReal(z, w));
+    printf("IMAGINARIA: z * w = %.2f\n", produtoImaginaria(z, w));
+
+}
+
+float somaReal (Numero z, Numero w) {
+
+    return z.real + w.real;
+}
+
+float somaImaginaria (Numero z, Numero w) {
+ 
+    return z.imaginaria + w.imaginaria;
+}
+
+float subtracaoReal(Numero z, Numero w) {
+
+    return z.real - w.real;;
+}
+float subtracaoImaginaria(Numero z, Numero w) {
+
+    return z.imaginaria - w.imaginaria;
+}
+
+float produtoReal(Numero z, Numero w) {
+
+    return z.real * w.real;;
+}
+float produtoImaginaria(Numero z, Numero w) {
+
+    return z.imaginaria * w.imaginaria;
 }
