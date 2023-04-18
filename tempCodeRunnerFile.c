@@ -31,11 +31,11 @@ void main() {
 
     Numero z, w;
 
-    z.real = 1.0;
-    z.imaginaria = 1.0;
+    printf("Informe os valores reais e imaginarias de z: \n");
+    scanf("%f %f", &z.real, &z.imaginaria);
 
-    w.real = 2.5;
-    w.imaginaria = -1.5;
+    printf("Informe os valores reais e imaginarias de w: \n");
+    scanf("%f %f", &w.real, &w.imaginaria);
 
     printf("*****SOMA*****\n\n");
     printf("REAL: z + w = %.2f\n", somaReal(z, w));
